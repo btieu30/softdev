@@ -17,6 +17,6 @@ def string_match(a, b):
     #return the overall count
     return count
 
-    return string_match('xxcaazz', 'xxbaaz')
-    return string_match('abc', 'abc')
-    return string_match('abc', 'axc')
+    print string_match('xxcaazz', 'xxbaaz')
+    print string_match('abc', 'abc')
+    print string_match('abc', 'axc')
