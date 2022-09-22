@@ -1,22 +1,20 @@
+
+#Given 2 strings, a and b, return the number of the positions where they contain the same length 2 substring. So "xxcaazz" and "xxbaaz" yields 3, since the "xx", "aa", and "az" substrings appear in the same place in both strings.
 def string_match(a, b):
-    count = 0
+  count = 0
+  if len(a) < len(b) : 
+    for x in range(len(a)-1) : #the number of times the for loop is run is the length of the smaller string
+      if a[x:x+2] == b[x:x+2] : #checks if two indices for both strings are equal
+        count +=1
+  else :
+    for x in range(len(b) - 1) :
+      if a[x:x+2] == b[x:x+2] :
+        count +=1
+  return count
 
-    #find the string with the shorter length
-    if len(a) < len(b):
-        shorter = a
-        longer = b
-    else:
-        shorter = b
-        longer = a
-    
-    #loop through the shorter string, check every two chars to check for matches
-    for x in range(len(shorter) - 1):
-        if shorter[x] == longer[x] and shorter[x+1] == longer[x+1]:
-            count = count + 1
-
-    #return the overall count
-    return count
-
-    print string_match('xxcaazz', 'xxbaaz')
-    print string_match('abc', 'abc')
-    print string_match('abc', 'axc')
+  
+'''
+string_match('xxcaazz', 'xxbaaz') → 3
+string_match('abc', 'abc') → 2
+string_match('abc', 'axc') → 0def string_match(a, b):
+'''
