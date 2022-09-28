@@ -5,12 +5,28 @@ K04 -- krewes/Making a random generator to return the name of a student from any
 2022-09-23
 .3 hrs
 
-OP Summary
-1) Create list of the keys in krewes ( using .keys() )
-2) Choose a random key / period in the list ( using random.randint() )
+OP Summary for randomdevo()
+1) Create list of the keys in krewes
+2) Choose a random key / period in the list
 3) Create list of the devos in the selected key / period
 4) Choose a random devo in the period
 5) Print the selected devo's name and period
+
+OP Summary for morethanone()
+1) Create variable numberofdevos to take user input
+2) Check if numberofdevos is within range (1 < numberofdevos < 106)
+   If so, proceed.
+   Else, user selects new numbers until there is one in range.
+3) Create for loop that continues until the required number of devos are printed.
+   Inside the for loop: ( steps a-e are the same as randomdevo() )
+   a) Create list of the keys in krewes
+   b) Choose a random key / period in the list
+   c) Create list of the devos in the selected key / period
+   d) Choose a random devo in the period
+   e) Print the selected devo's name and period
+   f) Check if the list of devos is of length 1
+      If so, remove key / period from krewes
+      Else, continue in the loop
 
 Q/C/C
 What other things can dictionaries do?
