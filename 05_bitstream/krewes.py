@@ -60,7 +60,7 @@ def morethanone():
         krewes[randp].remove(randd)
         if len(devos) == 1:
             krewes.pop(randp)
-            
+
 
 
 
