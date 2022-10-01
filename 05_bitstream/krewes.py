@@ -3,17 +3,18 @@ Um, I Don't Know: Brianna Tieu, May Qiu
 SoftDev
 K05 -- krewes/Making a random generator to return the name of a student from any class using dictionaries
 2022-09-29
-.5 hrs
+1 hr
 OP Summary for krewes.py
 1) Read through krewes.txt
-2) Initialize three dictionaries (one / period)
-3) Split krewes by "@@@"
-4) Create variables to get the devo's period, name and ducky name
-5) Sort devos by period, using their name as the key and the ducky name as the value
-6) Generate random int from 1-3, each corresponding to a period of sawftdev
-7) Create and randomly select from a list of the selected period's keys
-8) Get the value of the corresponding key
-9) Print out all the devo's info
+2) Initialize krewes dictionary
+3) Split .txt file by "@@@"
+4) Separate the devo's period and the devo + ducky name
+5) Populate krewes
+    a) check if the devo's period has already been created as a key to
+       prevent overwriting data
+    b) if it already exists, append the devo info to the list
+6) Randomly choose a key / period
+7) In the key, randomly choose a devo and print all the devo's information
 
 Q/C/C
 What other things can dictionaries do?
@@ -27,43 +28,29 @@ import random
 krewes_file = open("krewes.txt", "r")
 text = krewes_file.read()
 
-#creating separate dictionaries for all three periods
-second = {}
-seventh = {}
-eighth = {}
+#create an empty dictionary, to be filled with all the devos
+krewes = {}
 
-#split data by '@@@', as info for each devo is separated by '@@@'
+#split data by "@@@", as info for each devo is separated by "@@@"
 data = text.split("@@@")
-
 #for each devo, the order of the info is period, devo name, ducky name
-for x in data:
-    period = x.split("$$$")[0]
-    name = x.split("$$$")[1]
-    ducky = x.split("$$$")[2]
+for devo in data:
+    x = devo.split("$$$")
+    #the value of each key is a list of lists :o, each list having a devo name and ducky name
+    info = x[1:]
+    #check if the key already exists, so that values are not overwritten
+    if x[0] in krewes.keys():
+        krewes[x[0]].append(info)
+    else:
+        krewes[x[0]] = [info]
 
-    #intialize the new dict key and recognize the devo by period first,
-    #then append the devo and ducky name
-    if period == "2":
-        second[name] = ducky
-    if period == "7":
-        seventh[name] = ducky
-    if period == "8":
-        eighth[name] = ducky
+#randomly select a period
+period = random.choice(list(krewes.keys()))
 
-#generate random ints, ranging from 1-3 to randomly select the period
-randp = random.randint(1,3)
-if randp == 1:
-    print("Period: 2")
-    randd = random.choice(list(second.keys())) #randomly select a devo
-    print("Devo Name: " + str(randd))
-    print("Ducky Name: " + str(second.get(randd))) #get the value paired with the random devo's first name (which is their ducky name)
-if randp == 2:
-    print("Period: 7")
-    randd = random.choice(list(seventh.keys()))
-    print("Devo Name: " + str(randd))
-    print("Ducky Name: " + str(seventh.get(randd)))
-if randp == 3:
-    print("Period: 8")
-    randd = random.choice(list(eighth.keys()))
-    print("Devo Name: " + str(randd))
-    print("Ducky Name: " + str(eighth.get(randd)))
+#within the period, randomly select a list of one devo's info
+devo_info = random.choice(krewes[period])
+
+#put it all together and print! (the first item in devo_info is the devo's name, the second is the ducky's name)
+print("Devo " + str(devo_info[0]) + " with ducky " + str(devo_info[1]) + " from Period " + str(period))  
+
+#print(krewes)
