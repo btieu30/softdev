@@ -5,23 +5,45 @@ K06 : Divine your Destiny!
 DISCO:
 - We learned how to read a .csv file! (the process is similar to reading a .txt file)
 - We learned Brianna and May are flops
-- um
+- We use pop when removing from a list and append for adding to a list
+- random.choices() allows us to have weighted probabilities
 
 Q/C/C:
 - When separating the csv files by row, why isn't the comma included in the array?
--  
-
+-print(random.choices(list(jobdict.keys()), weights = jobdict.values()))
+ print(random.choices(joblist, cum_weights = perlist))
+ What is the difference between the first and second line of code? The first line of code runs while the second does not. The error was "in choices total = cum_weights[-1] + 0.0   # convert to float
+TypeError: can only concatenate str (not "float") to str
 '''
 
 import csv
-from random import choice
+import random
 
+joblist = []
+perlist = []
+jobdict = {}
 
 with open('occupations.csv','r') as file:
     reader = csv.reader(file)
+    #reads each line in the csv file and adds it to its respective list. The comma seperated the job and the percentage. 
     for row in reader:
-        job = row[0]
-        per = row[1]
+        joblist.append(row[0])
+        perlist.append(row[1])
+
+#popped off the job class percentage and the total, percentage
+joblist.pop(0)
+joblist.pop(len(joblist)-1)
+perlist.pop(0)
+perlist.pop(len(perlist)-1)
+
+#populate the dictionary, with the key as the occupation and the value as the percentage (represented by a float value)
+for x in range(len(joblist)):
+    jobdict[joblist[x]] = float(perlist[x])
+
+#randomly select an occupation from the keys of the dictionary, with the values/percentages as the weighted probabilities
+print(random.choices(list(jobdict.keys()), weights = jobdict.values()))
+
+
 
 
         
