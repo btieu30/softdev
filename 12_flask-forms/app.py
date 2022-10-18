@@ -1,6 +1,7 @@
-# Clyde 'Thluffy' Sinclair
-# SoftDev
-# Oct 2022
+#2 Whites & a Gray: Nada Hameed, Gitae Park, Brianna Tieu
+#Softdev
+#K12 -- Take and Give
+#2022-10-18
 
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
@@ -28,36 +29,24 @@ PROTIP: Insert your own in-line comments
    understand what is going on.
 '''
 
-#we can move the methods = ['GET', 'POST'] into the app.route() as another parameter
 @app.route("/", methods=['GET','POST']) 
 def disp_loginpage():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
     print(app)
-    #prints __main__
     print("***DIAG: request obj ***")
-    #request is module, how can we print it?
     print(request)
     print("***DIAG: request.args ***")
-    #what is args? arguments provided to module?
-    print(request.args)
-    #is request.args an array? based on [] usage in print statement
-    print("***DIAG: request.args['username']  ***")
-    #prints the type then submitted username
-    #for some reason this breaks the entire page, maybe because the username isn't submitted yet?
+    print(request.form)
+    #print("***DIAG: request.args['username']  ***")
     #print(request.args['username'])
     print("***DIAG: request.headers ***")
-    #not sure
     print(request.headers)
-    #all are print statements, so should show up in the terminal
-    #loads another page?
     print("HELP")
     print(request.form)
     return render_template( 'login.html' )
 
-@app.route("/asdf", methods=['GET','POST']) 
-#confusing route link, still has old route even if both are changed?
-#Route link changes if both are the same and valid, but if not, uses old working one
+@app.route("/auth", methods=['GET','POST']) 
 
 def authenticate():
     print("\n\n\n")
@@ -66,16 +55,17 @@ def authenticate():
     print("***DIAG: request obj ***")
     print(request)
     print("***DIAG: request.args ***")
-    print(request.args)
+    print(request.form)
     print("***DIAG: request.args['username']  ***")
-    print(request.args['username'])
+    print(request.form['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
     print("HELP")
     print(request.form)
-#request.form --> post, request.args --> get?
-    return "Hello User! Username: " + request.args['username'] + " Request Method: GET"
-    #response to a form submission
+    #use the html template to generate the desired response page
+    #replace user and method with whatever the user enters + what method is used
+    #request.form utilizes the same syntax as request.args
+    return render_template('response.html', user=request.form['username'], method=request.method)
 
 
     
