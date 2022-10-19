@@ -1,25 +1,71 @@
+<!--
+  2 Whites & a Gray: Nada Hameed, Gitae Park, Brianna Tieu
+  Softdev
+  K13 -- Stuylin' & Wylin' & Profilin'
+  2022-10-19
+-->
+
 <!DOCTYPE html>
 <html>
-<style>
-    div {
-        background-color: lightgray;
-        width: 1000px;
-    }
-</style>
-<body>
-    
-    <div>
-    <h1 style="color:white;text-align: center;">h1 foo</h1>
-    </div>
-    
-    <h2 style="color:black">main foo heading</h2>
-    <p style="color:black">bacon</p>
 
-    <h3 style="color:black">nav foo</h3>
-    <ul>
-        <li>dis</li>
-        <li>dat</li>
-        <li>de udda ting</li>
-    </ul>
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<!-- establish font and bg color for the whole site -->
+<body style="font-family: arial;
+            background-color:#666666 ">
+    
+<!-- HEADER: remove default margins, change background and text colors, center text -->
+    <h1 style="margin: 0px;
+               padding: 5px; 
+               background-color:#bebebe; 
+               color:white; 
+               text-align: center;">h1 foo</h1>
+
+<!-- create columns: one for nav and one for other header and text -->
+    <div style="background-color:#767676;
+                column-count: 2; 
+                display: flex;">
+
+<!-- div for nav bar / FIRST COL -->
+        <div style="padding: 10px;
+                    column-width: 1200px;">
+            
+            <h3 style="color:black">nav foo</h3>
+
+            <ul style="list-style: none;
+                       padding-left:0; color: white;">
+                <b>
+                    <li>dis</li>
+                    <li>dat</li>
+                    <li>de udda ting</li>
+                </b>
+            </ul>
+        </div>
+
+<!-- div for second header and Lorem Ipsum / SECOND COL -->
+        <div>
+            <h2 style="color:black">main foo heading</h2> 
+            <p style="color:black">
+                Stinking bishop brie bocconcini. Cut the cheese cheese on toast melted cheese roquefort cheeseburger manchego swiss stinking bishop. Taleggio cheese and wine cheesecake monterey jack fromage frais monterey jack queso halloumi. Fromage caerphilly cottage cheese the big cheese airedale st. agur blue cheese cut the cheese cottage cheese. Blue castello pecorino mascarpone roquefort cheddar ricotta say cheese mozzarella. Pepper jack chalk and cheese everyone loves mozzarella the big cheese cheese and biscuits brie dolcelatte. Stilton croque monsieur cheese and biscuits halloumi fromage ricotta melted cheese when the cheese comes out everybody's happy. Bocconcini bocconcini cheesecake cheese slices who moved my cheese swiss cottage cheese bavarian bergkase. Goat.
+                <br>
+                <br>
+                Brie croque monsieur feta. Rubber cheese bavarian bergkase roquefort cheesy feet cheddar dolcelatte mozzarella cheese on toast. Stilton roquefort red leicester cheesy feet bavarian bergkase queso who moved my cheese cheesy grin. Swiss pecorino the big cheese smelly cheese ricotta cottage cheese melted cheese ricotta. Mozzarella rubber cheese cream cheese bocconcini boursin red leicester port-salut bocconcini. Camembert de normandie the big cheese cheese and wine dolcelatte manchego cheesecake the big cheese queso. Everyone loves cheeseburger fromage frais hard cheese parmesan camembert de normandie dolcelatte boursin. St. agur blue cheese airedale camembert de normandie cheddar cheesy grin goat.
+                <br>
+                <br>
+                <a href="http://www.cheeseipsum.co.uk/">Cheese Ipsum Generator</a>
+            </p>
+        </div>
+    </div>
+
+<!-- div for copyright purposes :o -->
+    <div style="background-color:#565656;
+                color:#757472; 
+                text-align: right; 
+                padding: 8px;">
+        Copyright &#169; 2022: 2 Whites & a Gray: Nada Hameed, Gitae Park, Brianna Tieu
+    </div>
+
 </body>
 </html>
