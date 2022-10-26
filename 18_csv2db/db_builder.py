@@ -1,11 +1,13 @@
 #2 Whites & a Gray: Nada Hameed, Gitae Park, Brianna Tieu
 #SoftDev  
-#skeleton/stub :: SQLITE3 BASICS
+#K18: (Python+SQLite)3: A Mare Widge Made in Hebben
 #Oct 2022
 
 import sqlite3   #enable control of an sqlite database
 import csv       #facilitate CSV I/O
 
+#MAKE SURE TO REMOVE ANY EXISTING DATABASES THAT ARE CREATED THROUGH db_builder.py TO AVOID ERROR MESSAGES
+# - run "rm students.db" every time after you "python db_builder.py"
 
 DB_FILE="students.db"
 
