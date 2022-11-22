@@ -1,0 +1,13 @@
+BLT: Brianna Tieu and Lauren Lee
+SoftDev pd07
+K20 - A RESTful Journey Skyward
+2022-11-21
+time spent: .5 hr
+
+DISCO:
+- urlib.request allows us to open URLs
+- request.urlopen returns a request object, which can be read to return the displayed JSON data
+- json.loads can create a python dictionary for us
+
+QCC:
+- what is the difference between json.load() and json.loads()?
