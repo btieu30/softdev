@@ -1,0 +1,122 @@
+<!--
+  BLT: Brianna Tieu and Lauren Lee
+  SoftDev
+  K23 -- A Day of Noodling
+  2022-11-30
+  time spent: 1.5 hr
+-->
+<!doctype html>
+<html class="no-js" lang="en">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+</head>
+    
+    <title>BLT</title>
+  </head>
+    <h1> BLT: Brianna Tieu and Lauren Lee</h1>
+  <body>
+    <div class="row">
+      <h2>Form</h2>
+      Forms can take short text input, large text input, drop down, radio buttons, and check box question formats
+    </div>
+    <div class="row">
+      <div class="columns">
+        <form>
+          <label>Full Name
+            <input type="text" placeholder="First Last">
+          </label>
+          <label>Period
+            <select>
+              <option value="two">2</option>
+              <option value="seven">7</option>
+              <option value="eight">8</option>
+            </select>
+          </label>
+          <label>
+            Age
+            <input type="number">
+          </label>
+          <label>
+            Is cereal a soup or a salad and why?
+            <textarea></textarea>
+          </label>
+          <div class="row">
+            <fieldset class="large-6 columns">
+              <legend>Who is the best power ranger?</legend>
+              <input type="radio" name="power ranger" value="Red" id="choice1" required><label>Red Ranger</label>
+              <input type="radio" name="power ranger" value="Blue" id="choice2"><label>Blue Ranger</label>
+              <input type="radio" name="power ranger" value="Yellow" id="choice3"><label>Yellow Ranger</label>
+            </fieldset>
+            <fieldset class="large-6 columns">
+              <legend>Classes taken</legend>
+              <input id="checkbox1" type="checkbox"><label for="checkbox1">intro cs</label>
+              <input id="checkbox2" type="checkbox"><label for="checkbox2">apcs</label>
+              <input id="checkbox3" type="checkbox"><label for="checkbox3">nextcs</label>
+            </fieldset>
+          </div>
+          <div class="input-group-button">
+            <input type="submit" class="button" value="Submit">
+          </div>
+        </form>
+      </div>
+    </div>
+    <br>
+    <h2>Buttons</h2>
+    You can create multi sized buttons
+    <br>
+    <a class="tiny button" href="#0">So Tiny</a>
+    <a class="small button" href="#0">So Small</a>
+    <a class="large button" href="#0">So Large</a>
+    <h2>Cards</h2>
+    Cards act as flexboxes for website content. Cards are typically used to display images and captions.
+    <div class="card" style="width: 300px;">
+      <div class="card-divider">
+        <h4>I'm a BLT</h4>
+      </div>
+      <div class="card-section">
+        <p>How do I make a BLT you may ask? The image below shows the order of the ingredients in a BLT.</p>
+      </div>
+      <img src="https://cdn.tasteatlas.com/images/dishes/b1415ad0f4b245ffb49b6e4b1686c542.jpg?mw=900">
+    </div>
+    <h2>Grids</h2>
+    You can use grids to display website content in specific ways.
+
+    <h4>Full width</h4>
+    <div class="grid-x">
+      <div class="cell">Cat ipsum dolor sit amet, humans,humans, humans oh how much they love us felines we are the center of attention they feed, they clean for bite the neighbor's bratty kid but destroy house in 5 seconds. Jump around on couch, meow constantly until given food, pet me pet me don't pet me so cat not kitten around this human feeds me, i should be a god yet go into a room to decide you didn't want to be in there anyway. Sit in window and stare oooh, a bird, yum. Missing until dinner time i like to spend my days sleeping and eating fishes that my human fished for me we live on a luxurious yacht, sailing proudly under the sun, i like to walk on the deck, watching the horizon, dreaming of a good bowl of milk or mmmmmmmmmeeeeeeeeooooooooowwwwwwww.</div>
+    </div>
+    <br>
+    <h4>Half width</h4>
+    <div class="grid-x">
+      <div class="cell small-6">Cat ipsum dolor sit amet, humans,humans, humans oh how much they love us felines we are the center of attention they feed, they clean for bite the neighbor's bratty kid but destroy house in 5 seconds. Jump around on couch, meow constantly until given food, pet me pet me don't pet me so cat not kitten around this human feeds me, i should be a god yet go into a room to decide you didn't want to be in there anyway. Sit in window and stare oooh, a bird, yum. Missing until dinner time i like to spend my days sleeping and eating fishes that my human fished for me we live on a luxurious yacht, sailing proudly under the sun, i like to walk on the deck, watching the horizon, dreaming of a good bowl of milk or mmmmmmmmmeeeeeeeeooooooooowwwwwwww.</div>
+    </div>
+    <br>
+    <h4>Fourth width</h4>
+    <div class="grid-x">
+      <div class="cell small-3">Cat ipsum dolor sit amet, humans,humans, humans oh how much they love us felines we are the center of attention they feed, they clean for bite the neighbor's bratty kid but destroy house in 5 seconds. Jump around on couch, meow constantly until given food, pet me pet me don't pet me so cat not kitten around this human feeds me, i should be a god yet go into a room to decide you didn't want to be in there anyway. Sit in window and stare oooh, a bird, yum. Missing until dinner time i like to spend my days sleeping and eating fishes that my human fished for me we live on a luxurious yacht, sailing proudly under the sun, i like to walk on the deck, watching the horizon, dreaming of a good bowl of milk or mmmmmmmmmeeeeeeeeooooooooowwwwwwww.</div>
+    </div>
+    <br>
+    <strong>We can also use grids to make bodies of content scrollable.</strong>
+    <h4>A Horizontal Scroll</h4>
+    <div class="grid-y medium-grid-frame">
+      <div class="cell shrink header medium-cell-block-container">
+        <div class="grid-x grid-padding-x">
+          <div class="cell medium-5 medium-cell-block">
+            <p style="width:50vw;">Cat ipsum dolor sit amet, humans,humans, humans oh how much they love us felines we are the center of attention they feed, they clean for bite the neighbor's bratty kid but destroy house in 5 seconds. Jump around on couch, meow constantly until given food, pet me pet me don't pet me so cat not kitten around this human feeds me, i should be a god yet go into a room to decide you didn't want to be in there anyway. Sit in window and stare oooh, a bird, yum. Missing until dinner time i like to spend my days sleeping and eating fishes that my human fished for me we live on a luxurious yacht, sailing proudly under the sun, i like to walk on the deck, watching the horizon, dreaming of a good bowl of milk or mmmmmmmmmeeeeeeeeooooooooowwwwwwww.</p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <h4>A Vertical Scroll</h4>
+      <div class="cell medium-auto medium-cell-block-container">
+        <div class="grid-x grid-padding-x">
+          <div class="cell medium-8 medium-cell-block-y">
+            <p>Cat ipsum dolor sit amet, humans,humans, humans oh how much they love us felines we are the center of attention they feed, they clean for bite the neighbor's bratty kid but destroy house in 5 seconds. Jump around on couch, meow constantly until given food, pet me pet me don't pet me so cat not kitten around this human feeds me, i should be a god yet go into a room to decide you didn't want to be in there anyway. Sit in window and stare oooh, a bird, yum. Missing until dinner time i like to spend my days sleeping and eating fishes that my human fished for me we live on a luxurious yacht, sailing proudly under the sun, i like to walk on the deck, watching the horizon, dreaming of a good bowl of milk or mmmmmmmmmeeeeeeeeooooooooowwwwwwww. Ha ha, you're funny last chase laser or jumps off balcony gives owner dead mouse at present then poops in litter box snatches yarn and fights with dog cat chases laser then plays in grass finds tiny spot in cupboard and sleeps all day jumps in bathtub and meows when owner fills food dish the cat knocks over the food dish cat slides down the water slide and into pool and swims even though it does not like water furball roll roll roll pet me pet me don't pet me floof tum, tickle bum, jellybean footies curly toes. Cry louder at reflection. Spit up on light gray carpet instead of adjacent linoleum. Roll on the floor purring your whiskers off i do no work yet get food, shelter, and lots of stuff just like man who lives with us ignore the squirrels, you'll never catch them anyway commence midnight zoomies or eat the rubberband. Have a lot of grump in yourself because you can't forget to be grumpy and not be like king grumpy cat hiding behind the couch until lured out by a feathery toy go crazy with excitement when plates are clanked together signalling the arrival of cat food meow for food, then when human fills food dish, take a few bites of food and continue meowing and freak human out make funny noise mow mow mow mow mow mow success now attack human. Cats are the world ask to go outside and ask to come inside and ask to go outside and ask to come inside stare at ceiling stinky cat so car rides are evil. Trip owner up in kitchen i want food loved it, hated it, loved it, hated it. Destroy dog trip on catnip and i dreamt about fish yum!, meow meow you are my owner so here is a dead rat but sitting in a box. Curl up and sleep on the freshly laundered towels sit and stare purr get scared by sudden appearance of cucumber dead stare with ears cocked burrow under covers. Am in trouble, roll over, too cute for human to get mad leave fur on owners clothes. Meowing chowing and wowing lasers are tiny mice and reward the chosen human with a slow blink so has closed eyes but still sees you you have cat to be kitten me right meow reward the chosen human with a slow blink. Stare at the wall, play with food and get confused by dust. Give me some of your food give me some of your food give me some of your food meh, i don't want it i dreamt about fish yum! meow all night. Eat grass, throw it back up proudly present butt to human and meow ooh, are those your $250 dollar sandals? lemme use that as my litter box yet scratch at fleas, meow until belly rubs, hide behind curtain when vacuum cleaner is on scratch strangers and poo on owners food but check cat door for ambush 10 times before coming in for jump off balcony, onto stranger's head. Ccccccccccccaaaaaaaaaaaaaaatttttttttttttttttssssssssssssssss blow up sofa in 3 seconds for rub butt on table but peer out window, chatter at birds, lure them to mouth or i'm going to lap some water out of my master's cup meow, bite nose of your human so meoooow. Flex claws on the human's belly and purr like a lawnmower give me some of your food give me some of your food give me some of your food meh, i don't want it mess up all the toilet paper run up and down stairs the cat was chasing the mouse and white cat sleeps on a black shirt scratch. Meow i show my fluffy belly but it's a trap! if you pet it i will tear up your hand i will be pet i will be pet and then i will hiss but playing with balls of wool. Under the bed shred all toilet paper and spread around the house or proudly present butt to human for always ensure to lay down in such a manner that tail can lightly brush human's nose . I is not fat, i is fluffy. Touch water with paw then recoil in horror lick yarn hanging out of own butt. Catty ipsum sit by the fire so meow go back to sleep owner brings food and water tries to pet on head, so scratch get sprayed by water because bad cat. Play time floof tum, tickle bum, jellybean footies curly toes. You have cat to be kitten me right meow poop in a handbag look delicious and drink the soapy mopping up water then puke giant foamy fur-balls jumps off balcony gives owner dead mouse at present then poops in litter box snatches yarn and fights with dog cat chases laser then plays in grass finds tiny spot in cupboard and sleeps all day jumps in bathtub and meows when owner fills food dish the cat knocks over the food dish cat slides down the water slide and into pool and swims even though it does not like water kitty run to human with blood on mouth from frenzied attack on poor innocent mouse, don't i look cute? so brown cats with pink ears but sniff other cat's butt and hang jaw half open thereafter chase ball of string. I rule on my back you rub my tummy i bite you hard you call this cat food meow meow, i tell my human purr or leave hair on owner's clothes but russian blue, if it fits, i sits. Have secret plans demand to be let outside at once, and expect owner to wait for me as i think about it eat a rug and furry furry hairs everywhere oh no human coming lie on counter don't get off counter stand in doorway, unwilling to chose whether to stay in or go out yet sleep on keyboard. Purr please let me outside pouty face yay! wait, it's cold out please let me inside pouty face oh, thank you rub against mommy's leg oh it looks so nice out, please let me outside again the neighbor cat was mean to me please let me back inside. Chase red laser dot, but stinky cat so more napping, more napping all the napping is exhausting step on your keyboard while you're gaming and then turn in a circle and swat at dog. Kitty kitty pussy cat doll. Reward the chosen human with a slow blink spend six hours per day washing, but still have a crusty butthole and roll on the floor purring your whiskers off or chase the pig around the house. Attack like a vicious monster rub whiskers on bare skin act innocent for poop in litter box, scratch the walls shove bum in owner's face like camera lens, the cat was chasing the mouse so steal raw zucchini off kitchen counter.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    Credit to the <a href="http://www.catipsum.com/index.php">Cat Ipsum</a> for the text
+  </body>
+</html>
