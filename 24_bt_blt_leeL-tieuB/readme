@@ -1,0 +1,19 @@
+BLT: Brianna Tieu and Lauren Lee
+SoftDev
+K24-- Mmmmm... Tasty!
+2022-11-30
+time spent: 1.5 hr
+
+DISCO:
+- can link buttons/links to a part of your page by doing href="index.html#<id of what you want to link to>"
+
+QCC:
+- is the grid the only way to use flex alignment?
+
+q0: 1
+
+q0b:
+- Bootstrap Grid Documentation (https://getbootstrap.com/docs/4.0/layout/grid/)
+
+q1: Foundation!
+- We prefer Foundation because we thought it was easier to implement into our site and that the documentation was cleaner than Bootstrap's.
