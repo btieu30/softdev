@@ -1,0 +1,23 @@
+Team TT - Brianna Tieu, Vivian Teo
+SoftDev pd08
+K27 -- Basic functions in JavaScript
+2023-04-03t
+
+DISCO
+-----------------------------------------------------------------
+* functions in JS have the same syntax in Java
+* in scheme, no words 
+* console.log prints in the console 
+* to open the console on Mac, use command-option-J
+  for windows, ctrl-shift-J
+=================================================================
+
+QCC
+-----------------------------------------------------------------
+* What if we wanted to print what was in the console onto the HTML page?
+* scheme syntax is neat and very clean :)
+* vivian is cool <3
+=================================================================
+
+
+
