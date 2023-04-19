@@ -9,6 +9,9 @@
 //(Ctrl-Shift-K in Firefox to reveal console)
 console.log("AYO");
 
+var functionButton = document.getElementById("function");
+functionButton.addEventListener('click', change);
+
 var i = "hello";
 var j = 20;
 
@@ -28,15 +31,14 @@ var o = { 'name' : 'Thluffy',
           func : function(x) {
             return x+30;
           }
-        };
-
-
-var addItem = function(text) {
-  var list = document.getElementById("thelist");
-  var newitem = document.createElement("li");
-  newitem.innerHTML = text;
-  list.appendChild(newitem);
-};
+        };  // document.getElementById("li1")  // document.getElementById("li1")
+        // document.getElementById("li2")
+        // document.getElementById("li3")
+        // document.getElementById("li4")
+        // document.getElementById("li5")
+        // document.getElementById("li6")
+        // document.getElementById("li7")
+        // document.getElementById("li7")
 
 
 var removeItem = function(n) {
@@ -94,6 +96,18 @@ function gcd(n,m) {
         
         return gcd(m, n % m);    
 
+}
+
+//EVERYTHING FUNCTION TO CHANGE HTML
+function change() {
+  document.getElementById("li0").innerHTML="fact of 5: " + fact(5);
+  document.getElementById("li1").innerHTML="gcd of 5 and 20: "+ gcd(5,20);
+  document.getElementById("li2").innerHTML="fib of 9: " + fib(9);
+  document.getElementById("li3").innerHTML="fact of 9: " + fact(9);
+  document.getElementById("li4").innerHTML="gcd of 90 and 70: " + gcd(90,70);
+  document.getElementById("li5").innerHTML="fib of 123: " + fib(123);
+  document.getElementById("li6").innerHTML="fact of 792: " + fact(792);
+  document.getElementById("li7").innerHTML="gcd of 318124 and 214980: " + gcd(318124,214980);
 }
 
 // In addition to the style shown above,
