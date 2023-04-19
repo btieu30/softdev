@@ -105,9 +105,9 @@ function change() {
   document.getElementById("li2").innerHTML="fib of 9: " + fib(9);
   document.getElementById("li3").innerHTML="fact of 9: " + fact(9);
   document.getElementById("li4").innerHTML="gcd of 90 and 70: " + gcd(90,70);
-  document.getElementById("li5").innerHTML="fib of 123: " + fib(123);
-  document.getElementById("li6").innerHTML="fact of 792: " + fact(792);
-  document.getElementById("li7").innerHTML="gcd of 318124 and 214980: " + gcd(318124,214980);
+  document.getElementById("li5").innerHTML="fib of 20: " + fib(20);
+  document.getElementById("li6").innerHTML="fact of 23: " + fact(23);
+  document.getElementById("li7").innerHTML="gcd of 79 and 53: " + gcd(79,53);
 }
 
 // In addition to the style shown above,
