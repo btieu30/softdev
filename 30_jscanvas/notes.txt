@@ -1,0 +1,16 @@
+Team TT :: Brianna Tieu and Vivian Teo
+SoftDev pd8
+K30 -- JS Paint
+2023-04-25
+--------------------------------------------------
+
+DISCO:
+* fillStyle: changes color
+* stroke(): outlines shape
+* clearRect(x1,y1,x2,y2) clears canvas within the area of those coords
+* beginPath() - creates new path and gets rid of old stuff so the circle doesn't continue from the previous circle
+* ctx.arc(centerx,centery,radius,0,2*Math.PI,false); - draws full circle. can change multiple of pi to get like half a circle or something
+--------------------------------------------------
+
+QCC:
+* What was the canvas element in HTML built for (uses)? Like a primitive art program?
