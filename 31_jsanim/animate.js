@@ -6,7 +6,7 @@ var ctx = c.getContext("2d");
 
 ctx.fillStyle = "#ADD8E6";
 
-var requestID = myReq; //init global var for use with animation frames
+var requestID; //init global var for use with animation frames
 
 var clear = (e) => {
     ctx.clearRect(0, 0,c.width,c.height);
@@ -16,17 +16,36 @@ var radius = 0;
 var growing = true;
 
 var drawDot = () => {
-    clear(e);
-    ctx.beginPath();
-    window.requestAnimationFrame(myReq);
-    while (growing === true) {
-        radius = radius + 2;
-        ctx.arc(100, 100,radius,0,2*Math.PI,false);
-        //if stopit clicked then growing = false
-        // and set growing to false once the radius reaches the bounds of canvas
+    //clear the slate or playground
+    clear();
+    //check if the circle is meant to grow AND diameter is larger than canvas
+    if (growing === true && radius >= c.width / 2) {
+        growing = false;
+    } else if (growing === false && radius <= 0){
+        growing = true;
     }
+    //check if the circle is meant to grow and adjust radius accordingly
+    if (growing === true) {
+        radius = radius + 2;
+    } else {
+        radius = radius - 2;
+    }
+
+    ctx.beginPath();
+    ctx.arc(250, 250,radius,0,2*Math.PI,false);
+    ctx.fill();
+    ctx.closePath();
+
+    //cancel must go before request, otherwise the button must be clicked
+    //each time to grow the circle (but porque?)
+    window.cancelAnimationFrame(requestID);
+    requestID = window.requestAnimationFrame(drawDot);
 }
 
 var stopIt = () => {
-    
+    console.log(requestID);
+    window.cancelAnimationFrame(requestID);
 }
+
+dotButton.addEventListener("click", drawDot);
+stopButton.addEventListener("click", stopIt);
