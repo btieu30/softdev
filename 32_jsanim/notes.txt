@@ -1,0 +1,12 @@
+Team TT :: Donald Bi and Vivian Teo
+SoftDev pd8
+K31 -- JS Paint, Paint, Paint...
+2023-04-26
+--------------------------------------------------
+
+DISCO/QCC:
+* window.requestAnimationFrame(drawDot) recursively runs drawDot over and over again
+* window.cancelAnimationFrame(requestID);
+* cannot let radius go over canvas bounds or be negative: use this as part of a condition for changing "growing"
+* running window.cancelAnimationFrame(requestID); before requestAnimationFrame prevents exponential growth from clicking button
+--------------------------------------------------
