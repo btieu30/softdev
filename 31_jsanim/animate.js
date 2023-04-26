@@ -37,12 +37,19 @@ var drawDot = () => {
     }
 
     ctx.beginPath();
-    ctx.arc(250, 250,radius,0,2*Math.PI,false);
+    ctx.arc(250, 250,radius,0,2*Math.PI,false); //negative radius will cause an error with this method
     ctx.fill();
     ctx.closePath();
 
     //cancel must go before request, otherwise the button must be clicked
-    //each time to grow the circle (but porque?)
+    //each time to grow the circle (but porque?). (Shinji): I did some testing and it seems like if you remove
+    //the cancel entirely, it will work like normal on the first click, but you will get that issue Mykolyk mentioned
+    //in class about how the animation will begin speeding up if you keep pressing the button. I think this means that
+    //drawDot is called with window.requestAnimationframe(drawDot) and it will get compounded if there is no cancelAnimationFrame(requestID)
+    //(like there will be multiple instances of these continuous calls of drawdot, so it goes faster). window.cancelAnimationFrame(requestID)
+    //will close the latest called loop of this function, stopping it from repeating. Therefore, if the cancel goes after the request, it will
+    //close the function call/animation that is requested (that would maybe be executed on the next tick? IDK how exactly it all works), thus preventing it from
+    //repeating and only updating/going to the next frame once.
     window.cancelAnimationFrame(requestID);
     requestID = window.requestAnimationFrame(drawDot);
 }
