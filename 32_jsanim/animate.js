@@ -1,30 +1,66 @@
-// Team TT :: Donald Bi and Vivian Teo
+// Team TT :: Brianna Tieu and Vivian Teo
 // SoftDev pd8
-// K31 -- JS Paint, Paint, Paint...
-// 2023-04-26
+// K32 -- JS Bounce
+// 2023-04-27
 // --------------------------------------------------
 
 var c = document.getElementById("playground");
 
 var dotButton = document.getElementById("buttonCircle");
+var dvdButton = document.getElementById("buttonDVD");
 var stopButton = document.getElementById("buttonStop");
 
 var ctx = c.getContext("2d");
-
-ctx.fillStyle = "blue";
-
 var requestID; //counter for time
 
-var clear = () => {
+
+ctx.fillStyle = "blue";stopButton.addEventListener("click", stopIt);
+var clear = function(e) {
+    // e.preventDefault(); //prevents
     ctx.clearRect(0,0,c.width,c.height);
 }
+
+var dvdLogoSetup = function() {
+    window.cancelAnimationFrame(requestID);
+
+    var rectWidth = 120;
+    var rectHeight = 60;
+
+    var rectX = Math.random() * (c.width-rectWidth); //random coords 
+    var rectY = Math.random() * (c.width-rectHeight); //random coords 
+
+    var xVel = 1;
+    var yVel = 1;
+
+    var logo = new Image();
+    logo.src = "logo_dvd.jpg";
+
+    var dvdLogo = function() {
+        ctx.clearRect(0,0,c.width,c.height);
+        ctx.drawImage(logo,rectX,rectY,rectWidth,rectHeight);
+
+        if (rectX + rectWidth >= c.width || rectX <= 0) {
+            xVel = -1 * xVel;
+        }
+
+        if (rectY + rectHeight >= c.width || rectY <= 0) {
+            yVel = -1 * yVel;
+        }
+
+        rectX += xVel;
+        rectY += yVel;
+
+        requestID = window.requestAnimationFrame(dvdLogo);
+    };
+    dvdLogo();
+};
 
 var radius = 0;
 var growing = true;
 
-var drawDot = () => {
+var drawDot = (e) => {
     console.log("drawDot invoked...");
-    clear(); //wipe the canvas
+    clear(e); //wipe the canvas
 
     // if reach bounds, stop growing/shrinking
     if (radius===(c.height/2)) {
@@ -64,4 +100,5 @@ var drawCircle = function() {
 }
 
 dotButton.addEventListener("click", drawDot);
+dvdButton.addEventListener("click", dvdLogoSetup);
 stopButton.addEventListener("click", stopIt);

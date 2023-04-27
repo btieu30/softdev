@@ -1,12 +1,14 @@
-Team TT :: Donald Bi and Vivian Teo
+Team TT :: Brianna Tieu and Vivian Teo
 SoftDev pd8
-K31 -- JS Paint, Paint, Paint...
-2023-04-26
+K32 -- JS Bounce
+2023-04-27
 --------------------------------------------------
 
-DISCO/QCC:
-* window.requestAnimationFrame(drawDot) recursively runs drawDot over and over again
-* window.cancelAnimationFrame(requestID);
-* cannot let radius go over canvas bounds or be negative: use this as part of a condition for changing "growing"
-* running window.cancelAnimationFrame(requestID); before requestAnimationFrame prevents exponential growth from clicking button
+DISCO:
+* Need to account for all corners of the dvd logo when preventing it from going past boundaries
+* Need to account for all corners when generating random coordinates (logo has a width and height! use it)
+* Velocity: takes into direction of the logo
 --------------------------------------------------
+
+QCC:
+* Why do we need preventDefault() in this scenario..? Doesn't seem to do much
