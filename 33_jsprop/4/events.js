@@ -17,7 +17,11 @@ var clicky = function(e) {
 //Q: Does the order in which the event listeners are attached matter?
 
 //Predict, then test...
-//Q: What effect does the boolean arg have in each?
+//Prediction: when all are set to true, the information will be displayed in original order -> cell, row, table
+//Actual: went in table, row, cell order. From first part of the "tree" to last.
+//Q: What effect does the boolean arg have in each? When the boolean is set to true, the parent event is activated first before the
+// events of the child tags of that event. Additionally, child events with the boolean set to true will also activate before the parent
+// events that have it set to false, but will activate after the parent evetns that have it set to true.
 //   (Leave exactly 1 version uncommented to test...)
 
 for (var x=0; x < tds.length; x++) {

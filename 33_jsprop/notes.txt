@@ -1,0 +1,8 @@
+Bubble phase: The events are triggered in order from the "youngest" (html tag related) event in the tree to the "oldest".
+Capture phase: The events are triggered in order from the "oldest" (html tag related) event in the tree to the "youngest".
+
+Setting the boolean to true in addEventListener will stop events from activating in the bubble phase, so they activate in the
+capture phase instead. Table -> row -> cell order.
+
+Setting the boolean false (which is the default) in addEventListener will stop events from activating in the capture phase, so
+they activate in the bubble phase instead. Cell -> row -> table order.

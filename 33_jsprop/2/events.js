@@ -21,3 +21,5 @@ table.addEventListener('click', clicky);
 
 
 // Q: When user clicks on a cell, in what order will the pop-ups appear?
+// Prediction: cell, row, table
+// Actual: cell, row, table. Shows all of the html inside of the tags, including other tags/non displayed text.
